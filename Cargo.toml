@@ -10,7 +10,7 @@ edition = "2018"
 name = "tkrzw_sys"
 
 [dependencies]
-q
+
 
 [build-dependencies]
 bindgen = "0.53"
