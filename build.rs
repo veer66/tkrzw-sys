@@ -24,6 +24,11 @@ fn main() {
 	.header("wrapper.hpp")
 	.clang_args(clang_args)
      	.parse_callbacks(Box::new(bindgen::CargoCallbacks))
+	.opaque_type("std::*")
+	.whitelist_type("tkrzw::HashDBM")
+//	.blacklist_type("size_type")
+//	.blacklist_type("int_type")
+//	.blacklist_type("char_type")
      	.generate()
     	.expect("Unable to generate bindings");    
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
